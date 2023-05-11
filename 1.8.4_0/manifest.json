@@ -1,0 +1,26 @@
+{
+   "action": {
+      "default_popup": "popup/popup.html",
+      "default_title": "IG Follower Export tool"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "js": [ "content.js" ],
+      "matches": [ "https://www.instagram.com/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "Export IG followers & followings in CSV Excel formats within a few clicks.",
+   "host_permissions": [ "https://i.instagram.com/*", "https://www.instagram.com/*", "https://*.cdninstagram.com/*", "https://*.fbcdn.net/*", "https://hypercavs.com/" ],
+   "icons": {
+      "128": "icons/icon_128.png",
+      "48": "icons/icon_48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsjnaLYVVAD8cyDRfJ+sm5UFmPubxOYlw78kN+aCj9VPBTjLoAfnxkLx3Fqu4Msnmtg2Ioss4lLHDFx5JML2h+T+L/a1ZQTWndHFN7DnNfDZcKVVCYzyFfurBdADVo2K65HhsWwykuRtIGCBRlNdPrjJZEMamySVI3HSWXKE2bWxQP3dqzIY2pYkRCFsjpKzomY0BF1Viw1H3Fi0v206U38oPMoiaJzsZIi6Oes8kW5ekcnADgxo8HNe985zUjEqnXLgCDfhUHZBHGAQLPOhG1DzX3xmZCV9t0pZoe3YPCOrV1IzuzKWoruDmQ8WCsFWlc+I9skweQmKDjkqtTA2m5QIDAQAB",
+   "manifest_version": 3,
+   "name": "IG Follower Export tool",
+   "permissions": [ "storage", "declarativeNetRequest" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.8.4"
+}
